@@ -31,12 +31,12 @@ public class Test {
     DogStepTracker tracker = new DogStepTracker (steps, dogName, dogBreed, owner); 
 
     // Serializing 'tracker' 
-    FileOutputStream fos = new FileOutputStream(name: "dog_tracker.data"); 
+    FileOutputStream fos = new FileOutputStream( "dog_tracker.data"); 
     ObjectOutputStream oos = new ObjectOutputStream(fos); 
     oos.writeObject(tracker); 
-    
+
     // De-serializing 'tracker' 
-    FileInputStream fis = new FileInputStream(name: "dog_tracker.data"); 
+    FileInputStream fis = new FileInputStream( "dog_tracker.data"); 
     ObjectInputStream ois = new ObjectInputStream(fis); 
     DogStepTracker deserializedTracker = (DogStepTracker) ois.readObject(); // down-casting object 
     
